@@ -1,0 +1,13 @@
+{
+  "name": "moconvert",
+  "private": true,
+  "version": "1.0.0",
+  "description": "MoConvert — free and private browser-based image converter",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node --check src/app.js && node --check src/converter.js && node --check src/zip.js && node --check src/i18n.js && node --check scripts/build.mjs",
+    "test": "npm run check && npm run build"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f8fd" />
+  <meta name="description" content="MoConvert — convert images privately in your browser. Batch PNG, JPG, WebP, SVG, GIF, BMP and more with no uploads." />
+  <title>MoConvert — Free Image Converter</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <script>try{if(localStorage.getItem('moconvert-theme')==='dark')document.documentElement.dataset.theme='dark'}catch{}</script>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div class="site-root" id="top">
+    <header class="header">
+      <div class="shell nav">
+        <a class="brand" href="#top" aria-label="MoConvert Home">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 30 30" fill="none"><path d="M6 11h17l-4-4m4 4-4 4M24 19H7l4-4m-4 4 4 4" stroke="white" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span>Mo<span>Convert</span></span>
+        </a>
+        <div class="nav-actions">
+          <span class="privacy-pill"><span class="privacy-dot"></span><span data-i18n="navPrivacy">PRIVATE BY DESIGN</span></span>
+          <a href="#how-it-works" class="how-link" data-i18n="navHow">How it works</a>
+          <div class="nav-divider"></div>
+          <label class="sr-only" for="language" data-i18n="languageLabel">Language</label>
+          <select id="language" class="language-control" aria-label="Language"><option value="en">EN</option><option value="id">ID</option></select>
+          <button class="theme-control" id="themeBtn" type="button" aria-label="Switch theme"><span id="themeIcon" aria-hidden="true">☾</span><span id="themeLabel">Dark</span></button>
+          <a href="https://github.com/dimasmong/moconvert" class="github-link" target="_blank" rel="noopener noreferrer" aria-label="MoConvert GitHub" title="MoConvert on GitHub"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-2.02c-3.13.68-3.79-1.34-3.79-1.34-.5-1.29-1.25-1.63-1.25-1.63-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.63 1.22 3.27.93.1-.72.39-1.22.71-1.5-2.5-.28-5.12-1.25-5.12-5.57 0-1.23.44-2.23 1.16-3.01-.12-.28-.5-1.43.11-2.98 0 0 .94-.3 3.08 1.15a10.7 10.7 0 0 1 5.6 0c2.13-1.45 3.07-1.15 3.07-1.15.61 1.55.23 2.7.12 2.98.72.78 1.15 1.78 1.15 3.01 0 4.33-2.63 5.28-5.14 5.56.4.34.75 1 .75 2.02v2.99c0 .3.2.65.78.54A11.2 11.2 0 0 0 12 .8Z"/></svg></a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero shell">
+        <div class="hero-glow glow-a"></div><div class="hero-glow glow-b"></div>
+        <div class="eyebrow"><span>✧</span><span data-i18n="heroEyebrow">YOUR ALL-IN-ONE IMAGE STUDIO</span></div>
+        <h1><span data-i18n="heroOne">Every image.</span><br/><span class="gradient-text" data-i18n="heroTwo">The right format.</span></h1>
+        <p class="hero-desc" data-i18n="heroDesc">Convert images in seconds with beautiful quality and complete privacy. No sign-ups, no uploads, just results.</p>
+        <div class="hero-trust"><span><b>✓</b><span data-i18n="trustOne">No server uploads</span></span><span><b>✓</b><span data-i18n="trustTwo">Convert multiple files</span></span><span><b>✓</b><span data-i18n="trustThree">Completely free</span></span></div>
+      </section>
+
+      <section class="workspace shell" aria-labelledby="workspaceHeading">
+        <div class="workspace-top"><div><span class="mini-eyebrow" data-i18n="workspaceEyebrow">YOUR WORKSPACE</span><h2 id="workspaceHeading" data-i18n="workspaceTitle">Image converter</h2></div><span class="engine-pill"><span>●</span> <span data-i18n="engine">BROWSER ENGINE</span> <b>v1.0</b></span></div>
+        <div class="workspace-grid">
+          <div class="workspace-left">
+            <div class="dropzone" id="dropZone" tabindex="0" role="button" aria-label="Choose images">
+              <div class="upload-art"><span class="art-back"></span><span class="art-card"><svg viewBox="0 0 24 24" width="29" height="29" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m4 17 5-5 3.3 3.3 2.4-2.4L20 18"/></svg></span><span class="art-sparkle">✦</span></div>
+              <h3 data-i18n="dropTitle">Drop your images here</h3>
+              <p data-i18n="dropSubtitle">or browse from your device to get started</p>
+              <button type="button" class="button button-primary" id="chooseBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="17" height="17" aria-hidden="true"><path d="M12 16V4m0 0-4 4m4-4 4 4"/><path d="M4 16v4h16v-4"/></svg><span data-i18n="choose">Choose images</span></button>
+              <span class="drop-hint" data-i18n="dropHint">Multiple images supported · Files never leave your device</span>
+            </div>
+            <input type="file" id="files" hidden multiple accept="image/*,.svg,.ico,.bmp,.gif,.tiff,.tif,.heic,.heif,.avif,.apng" />
+            <div class="supported"><p data-i18n="formatsLabel">POPULAR INPUT FORMATS</p><div class="format-chips"><span>PNG</span><span>JPG</span><span>WebP</span><span>AVIF</span><span>GIF</span><span>SVG</span><span>BMP</span><span>ICO</span><span class="chip-muted" data-i18n="moreFormats">+ more*</span></div><small data-i18n="formatsDisclaimer">*Some formats depend on browser decoding support.</small></div>
+          </div>
+          <aside class="settings-panel">
+            <div class="settings-heading"><span class="setting-icon">⚙</span><div><h3 data-i18n="settingsTitle">Conversion settings</h3><p data-i18n="settingsSubtitle">Make it exactly how you want</p></div></div>
+            <div class="setting-field"><label for="outputFormat" data-i18n="outputLabel">Convert to</label><div class="input-wrap"><select id="outputFormat"><option value="image/webp">WebP</option><option value="image/png">PNG</option><option value="image/jpeg">JPG</option><option value="image/avif">AVIF</option><option value="image/bmp">BMP</option><option value="image/x-icon">ICO</option></select><span aria-hidden="true">⌄</span></div><p id="formatNote" class="setting-description"></p></div>
+            <div class="setting-field" id="qualityField"><div class="setting-dual"><label for="quality" data-i18n="qualityLabel">Image quality</label><output for="quality" id="qualityValue">90%</output></div><input type="range" min="40" max="100" step="1" value="90" id="quality"/><div class="range-caption"><span data-i18n="smaller">Smaller file</span><span data-i18n="better">Better quality</span></div></div>
+            <div class="settings-row"><div class="setting-field"><label for="resize" data-i18n="resizeLabel">Resize</label><div class="input-wrap"><select id="resize"><option value="100">100%</option><option value="75">75%</option><option value="50">50%</option><option value="25">25%</option></select><span aria-hidden="true">⌄</span></div></div><div class="setting-field" id="iconField" hidden><label for="iconSize" data-i18n="iconSizeLabel">Icon size</label><div class="input-wrap"><select id="iconSize"><option value="32">32 × 32</option><option value="64">64 × 64</option><option value="128" selected>128 × 128</option><option value="256">256 × 256</option></select><span aria-hidden="true">⌄</span></div></div></div>
+            <div class="setting-field" id="bgField" hidden><label for="bgColor" data-i18n="bgLabel">Transparent background becomes</label><div class="color-wrap"><input id="bgColor" type="color" value="#ffffff"/><span id="bgHex">#FFFFFF</span></div></div>
+            <label class="toggle-line"><input type="checkbox" id="firstFrame"/><span class="toggle-mark" aria-hidden="true"></span><span data-i18n="firstFrame">Allow first-frame conversion of animated images</span></label>
+            <div class="setting-info"><span aria-hidden="true">ⓘ</span><p data-i18n="conversionInfo">Output metadata may not be preserved. Animated and vector images become still raster images.</p></div>
+          </aside>
+        </div>
+        <div class="queue" id="queue" hidden><div class="queue-heading"><div><span class="mini-eyebrow" data-i18n="queueEyebrow">READY TO CONVERT</span><h2><span data-i18n="yourImages">Your images</span> <span class="count-pill" id="fileCount">0</span></h2></div><div class="queue-actions"><button type="button" class="button button-plain" id="clearBtn" data-i18n="clear">Clear all</button><button type="button" class="button button-primary" id="convertBtn"><span data-i18n="convertAll">Convert all</span><span aria-hidden="true">↗</span></button></div></div>
+          <div class="summary"><div><span data-i18n="total">Total images</span><strong id="totalCount">0</strong></div><div><span data-i18n="converted">Converted</span><strong id="doneCount">0</strong></div><div><span data-i18n="originalSize">Original size</span><strong id="originalTotal">0 B</strong></div><div><span data-i18n="convertedSize">Converted size</span><strong id="convertedTotal">—</strong></div></div>
+          <div class="global-progress" id="globalProgress" hidden><div><span id="progressMessage">Converting…</span><strong id="progressPercent">0%</strong></div><div class="progress-track"><div class="progress-fill" id="progressBar"></div></div></div>
+          <div id="fileList" class="file-list" aria-live="polite"></div>
+          <div class="queue-footer"><p id="queueFooterInfo" data-i18n="queueFoot">Choose your output, then convert.</p><button class="button button-download" id="downloadZipBtn" disabled><span aria-hidden="true">↓</span><span data-i18n="downloadZip">Download ZIP</span></button></div>
+        </div>
+      </section>
+      <section class="features shell" id="how-it-works"><div class="section-title"><span class="mini-eyebrow" data-i18n="whyLabel">WHY MOCONVERT</span><h2><span data-i18n="whyOne">Thoughtful tools.</span><br/><span class="gradient-text" data-i18n="whyTwo">Effortless results.</span></h2></div><div class="feature-cards"><article><span class="feature-icon ico-one">✧</span><h3 data-i18n="featureOneTitle">Designed for everyone</h3><p data-i18n="featureOneDesc">A clean, simple workspace that makes image conversion feel effortless.</p></article><article><span class="feature-icon ico-two">▢</span><h3 data-i18n="featureTwoTitle">Your files, your privacy</h3><p data-i18n="featureTwoDesc">Images are processed locally. We never upload your photos to a server.</p></article><article><span class="feature-icon ico-three">↧</span><h3 data-i18n="featureThreeTitle">Batch conversion</h3><p data-i18n="featureThreeDesc">Convert a whole collection and download everything together as a ZIP.</p></article></div></section>
+      <section class="faq shell"><div class="section-title"><span class="mini-eyebrow" data-i18n="faqEyebrow">GOOD TO KNOW</span><h2 data-i18n="faqTitle">Frequently asked questions</h2></div><div class="faq-list"><details><summary><span data-i18n="q1">Are my photos uploaded anywhere?</span><span class="plus">+</span></summary><p data-i18n="a1">No. Conversion and ZIP creation happen in your browser. No image files are sent to MoConvert servers.</p></details><details><summary><span data-i18n="q2">Can I convert HEIC, TIFF, or AVIF?</span><span class="plus">+</span></summary><p data-i18n="a2">Inputs depend on your browser's decoder. AVIF output also needs browser encoder support. Unsupported files show an honest error instead of fake conversions.</p></details><details><summary><span data-i18n="q3">What happens to animated GIFs?</span><span class="plus">+</span></summary><p data-i18n="a3">Animation cannot be preserved by this version. You must explicitly allow first-frame conversion before processing animated images.</p></details><details><summary><span data-i18n="q4">Will image quality always stay identical?</span><span class="plus">+</span></summary><p data-i18n="a4">No. JPEG, WebP and AVIF can use lossy encoding, and resizing discards pixels. PNG preserves canvas pixels but metadata and color profiles may change.</p></details></div></section>
+    </main>
+    <footer class="footer"><div class="shell footer-inside"><span class="footer-brand"><b>✧</b> MoConvert <span data-i18n="footerMotto">— images made easier.</span></span><span data-i18n="footerRight">Made with care. Your images stay yours.</span></div></footer>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="/src/app.js"></script>
+</body>
+</html>
