@@ -1,13 +1,14 @@
 {
   "name": "moconvert",
   "private": true,
-  "version": "1.0.0",
-  "description": "MoConvert — free and private browser-based image converter",
+  "version": "1.1.0",
+  "description": "MoConvert v1.1 browser image converter with opt-in EXIF/XMP metadata transfer",
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "check": "node --check src/app.js && node --check src/converter.js && node --check src/zip.js && node --check src/i18n.js && node --check scripts/build.mjs",
-    "test": "npm run check && npm run build"
+    "check": "node --check src/app.js && node --check src/converter.js && node --check src/metadata.js && node --check src/zip.js && node --check src/i18n.js && node --check scripts/build.mjs",
+    "test": "npm run check && npm run build",
+    "test:metadata": "node --test tests/*.test.mjs"
   },
   "license": "MIT"
 }

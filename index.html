@@ -40,7 +40,7 @@
       </section>
 
       <section class="workspace shell" aria-labelledby="workspaceHeading">
-        <div class="workspace-top"><div><span class="mini-eyebrow" data-i18n="workspaceEyebrow">YOUR WORKSPACE</span><h2 id="workspaceHeading" data-i18n="workspaceTitle">Image converter</h2></div><span class="engine-pill"><span>●</span> <span data-i18n="engine">BROWSER ENGINE</span> <b>v1.0</b></span></div>
+        <div class="workspace-top"><div><span class="mini-eyebrow" data-i18n="workspaceEyebrow">YOUR WORKSPACE</span><h2 id="workspaceHeading" data-i18n="workspaceTitle">Image converter</h2></div><span class="engine-pill"><span>●</span> <span data-i18n="engine">BROWSER ENGINE</span> <b>v1.1</b></span></div>
         <div class="workspace-grid">
           <div class="workspace-left">
             <div class="dropzone" id="dropZone" tabindex="0" role="button" aria-label="Choose images">
@@ -59,8 +59,12 @@
             <div class="setting-field" id="qualityField"><div class="setting-dual"><label for="quality" data-i18n="qualityLabel">Image quality</label><output for="quality" id="qualityValue">90%</output></div><input type="range" min="40" max="100" step="1" value="90" id="quality"/><div class="range-caption"><span data-i18n="smaller">Smaller file</span><span data-i18n="better">Better quality</span></div></div>
             <div class="settings-row"><div class="setting-field"><label for="resize" data-i18n="resizeLabel">Resize</label><div class="input-wrap"><select id="resize"><option value="100">100%</option><option value="75">75%</option><option value="50">50%</option><option value="25">25%</option></select><span aria-hidden="true">⌄</span></div></div><div class="setting-field" id="iconField" hidden><label for="iconSize" data-i18n="iconSizeLabel">Icon size</label><div class="input-wrap"><select id="iconSize"><option value="32">32 × 32</option><option value="64">64 × 64</option><option value="128" selected>128 × 128</option><option value="256">256 × 256</option></select><span aria-hidden="true">⌄</span></div></div></div>
             <div class="setting-field" id="bgField" hidden><label for="bgColor" data-i18n="bgLabel">Transparent background becomes</label><div class="color-wrap"><input id="bgColor" type="color" value="#ffffff"/><span id="bgHex">#FFFFFF</span></div></div>
+            <div class="metadata-control">
+              <label class="toggle-line metadata-toggle"><input type="checkbox" id="keepMetadata"/><span class="toggle-mark" aria-hidden="true"></span><span class="metadata-toggle-copy"><strong data-i18n="keepMetadata">Preserve metadata</strong><small data-i18n="metadataSubtitle">Keep supported EXIF / XMP in output files</small></span></label>
+              <div class="metadata-explainer" id="metadataExplainer" hidden><span aria-hidden="true">ⓘ</span><span data-i18n="metadataPrivacy">May include location (GPS), camera model and date taken. Not all formats support this feature.</span></div>
+            </div>
             <label class="toggle-line"><input type="checkbox" id="firstFrame"/><span class="toggle-mark" aria-hidden="true"></span><span data-i18n="firstFrame">Allow first-frame conversion of animated images</span></label>
-            <div class="setting-info"><span aria-hidden="true">ⓘ</span><p data-i18n="conversionInfo">Output metadata may not be preserved. Animated and vector images become still raster images.</p></div>
+            <div class="setting-info"><span aria-hidden="true">ⓘ</span><p data-i18n="conversionInfo">EXIF/XMP transfer supports JPEG, PNG and WebP. ICC profiles are not copied. Animation and vector images become still raster images.</p></div>
           </aside>
         </div>
         <div class="queue" id="queue" hidden><div class="queue-heading"><div><span class="mini-eyebrow" data-i18n="queueEyebrow">READY TO CONVERT</span><h2><span data-i18n="yourImages">Your images</span> <span class="count-pill" id="fileCount">0</span></h2></div><div class="queue-actions"><button type="button" class="button button-plain" id="clearBtn" data-i18n="clear">Clear all</button><button type="button" class="button button-primary" id="convertBtn"><span data-i18n="convertAll">Convert all</span><span aria-hidden="true">↗</span></button></div></div>
